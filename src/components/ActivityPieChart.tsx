@@ -18,9 +18,9 @@ const ActivityPieChart: React.FC<ActivityPieChartProps> = ({ data }) => {
   return (
     <section className="chart-section">
       <h2>Commits Proportion</h2>
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="100%" height={550}>
         <PieChart>
-          <Pie data={chartData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={200} fill="#8884d8" label>
+          <Pie data={chartData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={250} fill="#8884d8" label>
             {chartData.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
